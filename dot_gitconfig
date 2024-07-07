@@ -1,0 +1,7 @@
+[safe]
+	directory = /opt/flutter
+[core]
+	autocrlf = input
+[user]
+	email = 49324855+gratux@users.noreply.github.com
+	name = Victoria Grain
