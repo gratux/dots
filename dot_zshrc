@@ -162,11 +162,18 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
+# PyEnv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Profile
 if [ -f ~/.profile ]; then
   source ~/.profile
 else
   true # no profile, no problem
 fi
 
+# We are done, yippi
 echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 echo zsh ready...
